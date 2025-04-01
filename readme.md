@@ -3,10 +3,10 @@
 ## Generate Command
 
 ```
-firegen -i ./example.yaml -o ./gen -t ts 
+firegen -i ./example.yaml -o ./gen -t (ts | py) 
 ```
 
-### Example YAML
+### Example Input YAML Schema
 
 ```yaml
 - name: knowledgeGraphInfo # Variable name 

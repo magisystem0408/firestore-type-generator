@@ -11,10 +11,13 @@ fn main() {
 
     match args.target {
         cli::Target::Typescript => {
-            generator::generate_typescript_code(&defs);
+            let code = generator::generate_typescript_code(&defs);
+            std::fs::create_dir_all(&args.output).unwrap();
+            std::fs::write(format!("{}/gen_types.ts", args.output), code).unwrap();
         }
         cli::Target::Python => {
-            generator::generate_python_code(&defs);
+            // TODO: after supporting Python code generation
+            let _  = generator::generate_python_code(&defs);
         }
     }
 }
