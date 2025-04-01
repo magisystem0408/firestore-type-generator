@@ -12,8 +12,14 @@ fn main() {
     match args.target {
         cli::Target::Typescript => {
             let code = generator::generate_typescript_code(&defs);
-            std::fs::create_dir_all(&args.output).unwrap();
-            std::fs::write(format!("{}/gen_types.ts", args.output), code).unwrap();
+            if let Err(e) = std::fs::create_dir_all(&args.output) {
+                eprintln!("Failed to create output directory: {}", e);
+                std::process::exit(1);
+            }
+            if let Err(e) = std::fs::write(format!("{}/gen_types.ts", args.output), code) {
+                eprintln!("Failed to write to output file: {}", e);
+                std::process::exit(1);
+            }
         }
         cli::Target::Python => {
             // TODO: after supporting Python code generation
