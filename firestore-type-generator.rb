@@ -1,4 +1,4 @@
-class FirestoreTypeGenerator < Formula
+class Firegen < Formula
   desc "A tool to generate TypeScript types from Firestore schema"
   homepage "https://github.com/magisystem0408/firestore-type-generator"
   version "0.0.1"
