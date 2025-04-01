@@ -5,12 +5,8 @@ class FirestoreTypeGenerator < Formula
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/magisystem0408/firestore-type-generator/releases/download/v#{version}/firegen-x86_64-apple-darwin.tar.gz"
+    url "https://github.com/magisystem0408/firestore-type-generator/releases/download/v#{version}/firegen-aarch64-apple-darwin.tar.gz"
     sha256 "REPLACE_WITH_ACTUAL_SHA256"
-  elsif OS.linux?
-    url "https://github.com/magisystem0408/firestore-type-generator/releases/download/v#{version}/firegen-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "REPLACE_WITH_ACTUAL_SHA256"
-  end
 
   def install
     bin.install "firegen"
