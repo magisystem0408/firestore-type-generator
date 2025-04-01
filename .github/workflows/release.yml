@@ -27,13 +27,13 @@ jobs:
       - name: Package binary
         run: |
           mkdir dist
-          cp target/${{ matrix.target }}/release/firegen dist/
+          cp target/${{ matrix.target }}/release/fitype dist/
           cd dist
-          tar -czf ../firegen-${{ matrix.target }}.tar.gz firegen
+          tar -czf ../fitype-${{ matrix.target }}.tar.gz fitype
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
-          files: firegen-${{ matrix.target }}.tar.gz
+          files: fitype-${{ matrix.target }}.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
