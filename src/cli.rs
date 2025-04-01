@@ -3,7 +3,7 @@ use serde::Deserialize;
 use std::collections::BTreeMap;
 
 #[derive(Parser, Debug)]
-#[command(author, version, about)]
+#[command(name="firegen",author, version)]
 pub struct Args {
     #[arg(short, long)]
     pub input: String,
