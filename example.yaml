@@ -1,0 +1,11 @@
+- name: CompanyInfo
+  export: true
+  types:
+    id: string
+    name: string
+
+- name: UserInfo
+  export: true
+  types:
+    id: string
+    name: string
