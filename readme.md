@@ -1,8 +1,12 @@
 # fitype
 
-CloudFireStore Field Type File Generator Tool.
+### CloudFireStore Field Type File Generator Tool.
 
-### HomeBrew Installation
+#### Schema Driven Development
+if you define the schema in the yaml file, you can generate any language type code for the firestore field.
+
+![arch.png](docs/arch.png)
+## Homebrew Installation
 
 ```bash
 brew tap magisystem0408/firestore-type-generator
