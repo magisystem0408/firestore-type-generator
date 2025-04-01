@@ -6,7 +6,8 @@ class FirestoreTypeGenerator < Formula
 
   if OS.mac?
     url "https://github.com/magisystem0408/firestore-type-generator/releases/download/v#{version}/firegen-aarch64-apple-darwin.tar.gz"
-    sha256 "REPLACE_WITH_ACTUAL_SHA256"
+    sha256 "27b9ec6088d75947969127c89e3371d2450d9e8162d4d35f4c800a57c258e660"
+  end
 
   def install
     bin.install "firegen"
