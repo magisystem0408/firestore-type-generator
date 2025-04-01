@@ -6,7 +6,7 @@ class Fitype < Formula
 
   if OS.mac?
     url "https://github.com/magisystem0408/firestore-type-generator/releases/download/v#{version}/fitype-aarch64-apple-darwin.tar.gz"
-    sha256 "27b9ec6088d75947969127c89e3371d2450d9e8162d4d35f4c800a57c258e660"
+    sha256 "8b8782efa3025e92f0703c077f7342fce0ff1cde4aa957900776cacc956210b4"
   end
 
   def install
